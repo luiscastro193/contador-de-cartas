@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Contador de cartas</title>
+		<meta name="author" content="Luis Castro Martín">
+		<style>
+			.contador {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				margin: 0.25em;
+			}
+			
+			.contador > * {
+				margin: 0.25em;
+			}
+			
+			.boton {
+				align-self: flex-start;
+				width: 5em;
+				height: 5em;
+			}
+			
+			p {
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section style="display: flex; flex-wrap: wrap">
+			<article class="contador">
+				<p>Dos</p>
+				<p id="dosCount">4</p>
+				<button class="boton" onclick="restar('dosCount')">-</button>
+				<button class="boton" onclick="sumar('dosCount')">+</button>
+			</article>
+			<article class="contador">
+				<p>As</p>
+				<p id="asCount">4</p>
+				<button class="boton" onclick="restar('asCount')">-</button>
+				<button class="boton" onclick="sumar('asCount')">+</button>
+			</article>
+			<article class="contador">
+				<p>K</p>
+				<p id="kCount">4</p>
+				<button class="boton" onclick="restar('kCount')">-</button>
+				<button class="boton" onclick="sumar('kCount')">+</button>
+			</article>
+			<article class="contador">
+				<p>Q</p>
+				<p id="qCount">4</p>
+				<button class="boton" onclick="restar('qCount')">-</button>
+				<button class="boton" onclick="sumar('qCount')">+</button>
+			</article>
+		<section>
+		<script>
+			function sumar(elementId){
+				let element = document.getElementById(elementId);
+				element.innerText = parseInt(element.innerText) + 1;
+			}
+			
+			function restar(elementId){
+				let element = document.getElementById(elementId);
+				element.innerText = parseInt(element.innerText) - 1;
+			}
+		</script>
+	</body>
+</html>
