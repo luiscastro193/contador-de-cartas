@@ -6,6 +6,9 @@
 		<meta name="author" content="Luis Castro Martín">
 		<style>
 			.contador {
+				display: -webkit-flex;
+				-webkit-flex-wrap: wrap;
+				-webkit-flex-direction: column;
 				display: flex;
 				flex-wrap: wrap;
 				flex-direction: column;
@@ -17,7 +20,8 @@
 			}
 			
 			.boton {
-				align-self: flex-start;
+				-webkit-align-self: flex-start;
+				align-self: center;
 				width: 5em;
 				height: 5em;
 			}
@@ -29,7 +33,7 @@
 	</head>
 
 	<body>
-		<section style="display: flex; flex-wrap: wrap">
+		<section style="display: -webkit-flex; -webkit-flex-wrap: wrap; display: flex; flex-wrap: wrap">
 			<article class="contador">
 				<p>Dos</p>
 				<p id="dosCount">4</p>
