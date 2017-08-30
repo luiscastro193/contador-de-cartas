@@ -5,6 +5,13 @@
 		<title>Contador de cartas</title>
 		<meta name="author" content="Luis Castro Martín">
 		<style>
+			.contenedor {
+				display: -webkit-flex;
+				-webkit-flex-wrap: wrap;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			
 			.contador {
 				display: -webkit-flex;
 				-webkit-flex-wrap: wrap;
@@ -32,7 +39,7 @@
 	</head>
 
 	<body>
-		<section style="display: -webkit-flex; -webkit-flex-wrap: wrap; display: flex; flex-wrap: wrap">
+		<section class="contenedor">
 			<article class="contador">
 				<p>Dos</p>
 				<p id="dosCount">4</p>
